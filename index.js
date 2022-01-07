@@ -9,7 +9,7 @@
 function computerPlay() {
     let compPlay = "";
     let userPlay = "";
-
+//user plays, check user play, then computer plays
      function play() {
         userPlay = prompt("Enter: Rock, Paper, or Scissors");
         userPlay = userPlay.charAt(0).toUpperCase() + userPlay.slice(1);
@@ -29,14 +29,14 @@ function computerPlay() {
         console.log(`Computer chooses ${compPlay}`);
         compare(); 
     }
-
+//compare results
     function compare() {
         console.log(`Comp = ${compPlay} & Player = ${userPlay}`);
         if(compPlay == userPlay) {
             console.log(`It's a tie! Computer chose ${compPlay}.  Player chose ${userPlay}.`);
             alert(`It's a tie! Computer chose ${compPlay}.  Player chose ${userPlay}.`);
             return;
-        } else if((compPlay == "Rock" && userPlay == "Scissors") || (compPlay == "Paper" && userPlay == "Rock") || (compPlay == "Scissors" && userPlay == "Rock")) {
+        } else if((compPlay == "Rock" && userPlay == "Scissors") || (compPlay == "Paper" && userPlay == "Rock") || (compPlay == "Scissors" && userPlay == "Paper")) {
             console.log(`Computer wins!  Computer chose ${compPlay}.  Player chose ${userPlay}.`);
             alert(`Computer wins!  Computer chose ${compPlay}.  Player chose ${userPlay}.`);
             return;
