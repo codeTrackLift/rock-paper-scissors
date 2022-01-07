@@ -21,17 +21,13 @@ function computerPlay() {
         let randomPlay = Math.floor(Math.random() * 3 ) + 1;
         if(randomPlay === 1) {
             compPlay = "Rock";
-            console.log(`Computer chooses ${compPlay}`);
-            compare();
         } else if(randomPlay === 2) {
             compPlay = "Paper";
-            console.log(`Computer chooses ${compPlay}`);
-            compare();
         } else {
             compPlay = "Scissors";
-            console.log(`Computer chooses ${compPlay}`);
-            compare(); 
         }
+        console.log(`Computer chooses ${compPlay}`);
+        compare(); 
     }
 
     function compare() {
