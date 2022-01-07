@@ -107,7 +107,7 @@ function buttonPlay(value) {
     }
 }
 
-//button to reset rounds
+//button to reset rounds counter
 function resetRounds() {
     rounds = 0;
     document.getElementById("rounds").innerHTML = rounds;
