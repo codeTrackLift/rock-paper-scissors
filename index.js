@@ -31,7 +31,7 @@ function game() {
                 console.log(`Computer chooses ${compPlay}`);
                 compare(); 
             }
-        //compare results
+        //compare result
             function compare() {
                 console.log(`Comp = ${compPlay} & Player = ${userPlay}`);
                 if(compPlay == userPlay) {
