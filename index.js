@@ -2,12 +2,10 @@
 //Plan:  Use random numbers 1-3; assign numbers to R/P/S;
 //Divide:  Prompt user to pick R/P/S; compare against computers random pick; console.log result
 
-
-
 function game() {
     let resultsArr = [];
-    for(let round = 1; round < 4; round++) {
-        document.getElementById("round").innerHTML = round;
+    for(let rounds = 1; rounds < 6; rounds++) {
+        document.getElementById("rounds").innerHTML = rounds;
         function computerPlay() {
             let compPlay = "";
             let userPlay = "";
@@ -62,4 +60,54 @@ function game() {
         }
         computerPlay();
     }
+}
+
+//Problem: Modify RPS game to use button interface rather than text prompts
+//Plan: Button enters userPlay variable, compare, print results to array, subsequent button press increments rounds and adds to results array
+
+let rounds = 0;
+function buttonPlay(value) {
+    let resultsArr = [];
+    console.log(`User clicked the ${value} button`);
+    userPlay = value;
+    let randomPlay = Math.floor(Math.random() * 3 ) + 1;
+    rounds += 1;
+    document.getElementById("rounds").innerHTML = rounds;
+    if(randomPlay === 1) {
+        compPlay = "Rock";
+    } else if(randomPlay === 2) {
+        compPlay = "Paper";
+    } else {
+        compPlay = "Scissors";
+    }
+    console.log(`Computer chooses ${compPlay}`);
+    compare();
+    function compare() {
+        console.log(`Comp = ${compPlay} & Player = ${userPlay}`);
+        if(compPlay == userPlay) {
+            var result = "<b><u>It's a tie!</u></b> <br>Computer: " + compPlay + "<br>Player: "  + userPlay;
+            resultsArr.push(result);
+            document.getElementById("result").innerHTML = resultsArr;
+            console.log(result);
+            return;
+        } else if((compPlay == "Rock" && userPlay == "Scissors") || (compPlay == "Paper" && userPlay == "Rock") || (compPlay == "Scissors" && userPlay == "Paper")) {
+            var result = "<b><u>Computer wins!</u></b> <br>Computer: " + compPlay + "<br>Player: "  + userPlay;
+            resultsArr.push(result);
+            document.getElementById("result").innerHTML = resultsArr;
+            console.log(result);
+            return;
+        } else {
+            var result = "<b><u>Player wins!</u></b> <br>Computer: " + compPlay + "<br>Player: " + userPlay; 
+            resultsArr.push(result);
+            document.getElementById("result").innerHTML = resultsArr;
+            console.log(result);
+            return;
+            
+        }
+    }
+}
+
+function resetRounds() {
+    rounds = 0;
+    document.getElementById("rounds").innerHTML = rounds;
 }
