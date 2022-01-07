@@ -33,18 +33,42 @@ function computerPlay() {
     function compare() {
         console.log(`Comp = ${compPlay} & Player = ${userPlay}`);
         if(compPlay == userPlay) {
-            console.log(`It's a tie! Computer chose ${compPlay}.  Player chose ${userPlay}.`);
-            alert(`It's a tie! Computer chose ${compPlay}.  Player chose ${userPlay}.`);
+            var result = "It's a tie! Computer chose " + compPlay + ".  Player chose "  + userPlay + ".";
+            document.getElementById("info").innerHTML = "Tie!";
+            console.log(result);
+            alert(result);
             return;
         } else if((compPlay == "Rock" && userPlay == "Scissors") || (compPlay == "Paper" && userPlay == "Rock") || (compPlay == "Scissors" && userPlay == "Paper")) {
-            console.log(`Computer wins!  Computer chose ${compPlay}.  Player chose ${userPlay}.`);
-            alert(`Computer wins!  Computer chose ${compPlay}.  Player chose ${userPlay}.`);
+            var result = "Computer wins!  Computer chose " + compPlay + ".  Player chose "  + userPlay + ".";
+            document.getElementById("info").innerHTML = "Computer wins!";
+            console.log(result);
+            alert(result);
             return;
         } else
-            console.log(`Player wins!  Computer chose ${compPlay}.  Player chose ${userPlay}.`);
-            alert(`Player wins!  Computer chose ${compPlay}.  Player chose ${userPlay}.`);
+            var result = "Player wins!  Computer chose " + compPlay + ".  Player chose " + userPlay + "."; 
+            document.getElementById("info").innerHTML = "Player wins!";
+            console.log(result);
+            alert(result);
             return;
         }
     }
     play();
 }
+
+//compare results v00
+// function compare() {
+//     console.log(`Comp = ${compPlay} & Player = ${userPlay}`);
+//     if(compPlay == userPlay) {
+//         console.log(`It's a tie! Computer chose ${compPlay}.  Player chose ${userPlay}.`);
+//         alert(`It's a tie! Computer chose ${compPlay}.  Player chose ${userPlay}.`);
+//         return;
+//     } else if((compPlay == "Rock" && userPlay == "Scissors") || (compPlay == "Paper" && userPlay == "Rock") || (compPlay == "Scissors" && userPlay == "Paper")) {
+//         console.log(`Computer wins!  Computer chose ${compPlay}.  Player chose ${userPlay}.`);
+//         alert(`Computer wins!  Computer chose ${compPlay}.  Player chose ${userPlay}.`);
+//         return;
+//     } else
+//         console.log(`Player wins!  Computer chose ${compPlay}.  Player chose ${userPlay}.`);
+//         alert(`Player wins!  Computer chose ${compPlay}.  Player chose ${userPlay}.`);
+//         return;
+//     }
+// }
