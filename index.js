@@ -6,7 +6,7 @@
 
 function game() {
     let resultsArr = [];
-    for(let round = 0; round < 6; round++) {
+    for(let round = 1; round < 4; round++) {
         document.getElementById("round").innerHTML = round;
         function computerPlay() {
             let compPlay = "";
@@ -31,7 +31,7 @@ function game() {
                 console.log(`Computer chooses ${compPlay}`);
                 compare(); 
             }
-        //compare result
+        //compare results
             function compare() {
                 console.log(`Comp = ${compPlay} & Player = ${userPlay}`);
                 if(compPlay == userPlay) {
