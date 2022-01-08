@@ -11,3 +11,5 @@ VS Code
 JavaScript
 HTML
 Problem Solve
+
+Notes: Thanks to pixabay.com for the images!
