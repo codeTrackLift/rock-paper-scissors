@@ -18,7 +18,7 @@ body>div {
     border-radius: 8px;
     margin: 10px;
     padding: 0px 20px 10px 20px;
-    min-width: 600px;
+    min-width: 500px;
     width: 70%;
 }
 
@@ -45,6 +45,10 @@ body>div {
     flex-direction: row;
 }
 
+#buttonPlay>div>input {
+    margin: 0 1rem 0 1rem;
+}
+
 #gameInfo {
     display: flex;
     align-items: center;
@@ -60,7 +64,7 @@ body>div {
 .infoRight {
     display: flex;
     justify-content: space-evenly;
-    padding: 0px 1rem 1rem 1rem;
+    padding: 0px 0px 0px 0px;
     align-items: center;
     flex-wrap: wrap;
 }
