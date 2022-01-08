@@ -2,7 +2,9 @@ html {
     background-color: tan;
     box-sizing: border-box;
     background-image: linear-gradient(rgba(75, 75, 75, 0.7), rgba(75, 75, 75, 0.7)), url("./rps_white.png");
-    background-size: 100%;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: 100vw;
 }
 
 body {
