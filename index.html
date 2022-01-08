@@ -14,30 +14,48 @@
         <p>Hello, this is my first JavaScript project.  Finally got it to work on Day 22 of #100DaysOfCode.</p>
         <p>Thanks for checking out my project!!</p>
     </div>
-    <hr>
+
     <div id="textPlay">
         <h3>Text Input Option</h3>
-        <p>Click the button below to play 5 rounds using text prompts with entry validation.</p>
-        <button onclick="game();">Click Me!</button>
+        <p>Click the button below to play 3 consecutive rounds using text prompts with entry validation.</p>
+        <button onclick="game();">Play 3 Rounds</button>
     </div>
-    <hr>
-    <div>
+
+    <div id="buttonPlay">
         <h3 class="button">Button Input Option</h3>
         <p>Click any of the buttons below to play...</p>
-        <input type="button" value="Rock" onclick="buttonPlay('Rock')">
-        <input type="button" value="Paper" onclick="buttonPlay('Paper')">
-        <input type="button" value="Scissors" onclick="buttonPlay('Scissors')">
+        <div>
+            <input type="button" value="Rock" onclick="buttonPlay('Rock')">
+            <input type="button" value="Paper" onclick="buttonPlay('Paper')">
+            <input type="button" value="Scissors" onclick="buttonPlay('Scissors')">
+        </div>
     </div>
-    <hr>
+
     <div id="gameInfo">
-        <h3>Game Results:</h3>
-        <p id="result">Ready to play, please click a button...</p>
-        <h4>Rounds:</h4>
-        <p id="rounds">0</p>
+        <div>
+            <h3>Game Results:</h3>
+            <p id="result">Ready to play, please click a button...</p>
+        </div>
+        <div>
+            <h4>Rounds:</h4>
+            <p id="rounds">0</p>
+        </div>
+        <div>
+            <h4>Win:</h4>
+            <p id="win">0</p>
+        </div>
+        <div>
+            <h4>Lose:</h4>
+            <p id="lose">0</p>
+        </div>
+        <div>
+            <h4>Tie:</h4>
+            <p id="tie">0</p>
+        </div>
     </div>
-    <hr>
-    <div>
-        <input type="button" value="Reset Rounds" onclick="resetRounds();">
+
+    <div id="resetButton">
+        <input type="button" value="Reset Stats" onclick="resetStats();">
     </div>
 </body>
 </html>
