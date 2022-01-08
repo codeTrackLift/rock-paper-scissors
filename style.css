@@ -50,9 +50,23 @@ body>div {
     align-items: center;
 }
 
-#gameInfo>div {
+.infoLeft {
+    display: flex;
+    flex-direction: column;
     padding: 0px 1rem 1rem 1rem;
     align-items: center;
+}
+
+.infoRight {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 1rem 1rem 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.infoRight>div {
+    padding: 1rem;
 }
 
 #resetButton {

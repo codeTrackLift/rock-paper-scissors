@@ -6,6 +6,7 @@ let rounds = 0;
 let win = 0;
 let lose = 0;
 let tie = 0;
+let percent = 0;
 
 function game() {
     let resultsArr = [];
@@ -44,6 +45,8 @@ function game() {
                     document.getElementById("result").innerHTML = resultsArr;
                     document.getElementById("tie").innerHTML = tie;
                     console.log(result);
+                    win !== 0 ? percent = Math.round((win / rounds) * 100) : "";
+                    document.getElementById("percent").innerHTML = percent;
                     alert("This round is a tie.");
                     return;
                 } else if((compPlay == "Rock" && userPlay == "Scissors") || (compPlay == "Paper" && userPlay == "Rock") || (compPlay == "Scissors" && userPlay == "Paper")) {
@@ -53,6 +56,8 @@ function game() {
                     document.getElementById("result").innerHTML = resultsArr;
                     document.getElementById("lose").innerHTML = lose;
                     console.log(result);
+                    win !== 0 ? percent = Math.round((win / rounds) * 100) : "";
+                    document.getElementById("percent").innerHTML = percent;
                     alert("You lost this round.");
                     return;
                 } else {
@@ -62,6 +67,8 @@ function game() {
                     document.getElementById("result").innerHTML = resultsArr;
                     document.getElementById("win").innerHTML = win;
                     console.log(result);
+                    win !== 0 ? percent = Math.round((win / rounds) * 100) : "";
+                    document.getElementById("percent").innerHTML = percent;
                     alert("You won this round!");
                     return;
                     }
@@ -101,6 +108,8 @@ function buttonPlay(value) {
             document.getElementById("result").innerHTML = resultsArr;
             document.getElementById("tie").innerHTML = tie;
             console.log(result);
+            win !== 0 ? percent = Math.round((win / rounds) * 100) : "";
+            document.getElementById("percent").innerHTML = percent;
             return;
         } else if((compPlay == "Rock" && userPlay == "Scissors") || (compPlay == "Paper" && userPlay == "Rock") || (compPlay == "Scissors" && userPlay == "Paper")) {
             var result = "<b><u>You lose.</u></b> <br>Computer: " + compPlay + "<br>Player: "  + userPlay;
@@ -109,6 +118,8 @@ function buttonPlay(value) {
             document.getElementById("result").innerHTML = resultsArr;
             document.getElementById("lose").innerHTML = lose;
             console.log(result);
+            win !== 0 ? percent = Math.round((win / rounds) * 100) : "";
+            document.getElementById("percent").innerHTML = percent;
             return;
         } else {
             var result = "<b><u>Player wins!</u></b> <br>Computer: " + compPlay + "<br>Player: " + userPlay; 
@@ -117,6 +128,8 @@ function buttonPlay(value) {
             document.getElementById("result").innerHTML = resultsArr;
             document.getElementById("win").innerHTML = win;
             console.log(result);
+            win !== 0 ? percent = Math.round((win / rounds) * 100) : "";
+            document.getElementById("percent").innerHTML = percent;
             return;
             
         }
@@ -133,4 +146,6 @@ function resetStats() {
     document.getElementById("lose").innerHTML = lose;
     tie = 0;
     document.getElementById("tie").innerHTML = tie;
+    percent = 0;
+    document.getElementById("percent").innerHTML = percent;
 }
