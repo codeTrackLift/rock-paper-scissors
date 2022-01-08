@@ -81,13 +81,13 @@ input:hover,button:hover {
 .infoRight {
     display: flex;
     justify-content: space-evenly;
-    padding: 0px 0px 0px 0px;
+    /* padding: 0px 0px 0px 0px; */
     align-items: center;
     flex-wrap: wrap;
 }
 
 .infoRight>div {
-    padding: 1rem;
+    padding: 0px 1rem 0px 1rem;
 }
 
 #resetButton {
