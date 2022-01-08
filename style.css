@@ -43,15 +43,29 @@ h2, h3, h4 {
     flex-direction: column;
     align-items: center;
 }
-
-input, button {
+button,input {
     background-color: blue;
-    color: silver
+    color: silver;
 }
 
-input:hover,button:hover {
+.button {
+    width: 15%;
+    height: 12%;
+    background-color: transparent;
+}
+
+button:hover{
     background-color: limegreen;
     color: black;
+}
+
+.button:hover {
+    opacity: 50%;
+    background-color: yellow;
+    border-radius: 12px;
+    border: 5px solid red;
+    padding: -5px;
+    margin: -5px;
 }
 
 #buttonPlay {
@@ -63,6 +77,8 @@ input:hover,button:hover {
 #buttonPlay>div {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    margin-bottom: 24px;
 }
 
 #buttonPlay>div>input {
@@ -99,4 +115,16 @@ input:hover,button:hover {
     justify-content: center;
     margin-top: -1.75rem;
     margin-right: -8rem;
+}
+
+#resetButton>input {
+    background-color: blue;
+    color: silver;
+    padding: 0px 0.25rem 0px 0.25rem;
+}
+
+#resetButton>input:hover {
+    background-color: limegreen;
+    color: black;
+    opacity: 100%;
 }
