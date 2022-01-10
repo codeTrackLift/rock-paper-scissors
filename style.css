@@ -5,7 +5,7 @@ html {
     /* fixed background */
     background-attachment: fixed;
     background-position: top center;
-    background-size: 100vw;
+    background-size: cover;
 }
 
 body {
