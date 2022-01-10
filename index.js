@@ -11,7 +11,7 @@ let percent = 0;
 function game() {
     let resultsArr = [];
     for(let rounds = 1; rounds < 4; rounds++) {
-        document.getElementById("rounds").innerHTML = rounds;
+        document.getElementById("rounds").innerText = rounds;
         function computerPlay() {
             let compPlay = "";
             let userPlay = "";
@@ -43,10 +43,10 @@ function game() {
                     resultsArr.push("<br><br>" + result);
                     tie++;
                     document.getElementById("result").innerHTML = resultsArr;
-                    document.getElementById("tie").innerHTML = tie;
+                    document.getElementById("tie").innerText = tie;
                     console.log(result);
                     win !== 0 ? percent = Math.round((win / rounds) * 100) : "";
-                    document.getElementById("percent").innerHTML = percent;
+                    document.getElementById("percent").innerText = percent;
                     alert("This round is a tie.");
                     return;
                 } else if((compPlay == "Rock" && userPlay == "Scissors") || (compPlay == "Paper" && userPlay == "Rock") || (compPlay == "Scissors" && userPlay == "Paper")) {
@@ -54,10 +54,10 @@ function game() {
                     resultsArr.push("<br><br>" + result);
                     lose++;
                     document.getElementById("result").innerHTML = resultsArr;
-                    document.getElementById("lose").innerHTML = lose;
+                    document.getElementById("lose").innerText = lose;
                     console.log(result);
                     win !== 0 ? percent = Math.round((win / rounds) * 100) : "";
-                    document.getElementById("percent").innerHTML = percent;
+                    document.getElementById("percent").innerText = percent;
                     alert("You lost this round.");
                     return;
                 } else {
@@ -65,10 +65,10 @@ function game() {
                     resultsArr.push("<br><br>" + result);
                     win++;
                     document.getElementById("result").innerHTML = resultsArr;
-                    document.getElementById("win").innerHTML = win;
+                    document.getElementById("win").innerText = win;
                     console.log(result);
                     win !== 0 ? percent = Math.round((win / rounds) * 100) : "";
-                    document.getElementById("percent").innerHTML = percent;
+                    document.getElementById("percent").innerText = percent;
                     alert("You won this round!");
                     return;
                     }
@@ -106,30 +106,30 @@ function buttonPlay(value) {
             resultsArr.push(result);
             tie++;
             document.getElementById("result").innerHTML = resultsArr;
-            document.getElementById("tie").innerHTML = tie;
+            document.getElementById("tie").innerText = tie;
             console.log(result);
             win !== 0 ? percent = Math.round((win / rounds) * 100) : "";
-            document.getElementById("percent").innerHTML = percent;
+            document.getElementById("percent").innerText = percent;
             return;
         } else if((compPlay == "Rock" && userPlay == "Scissors") || (compPlay == "Paper" && userPlay == "Rock") || (compPlay == "Scissors" && userPlay == "Paper")) {
             var result = "<b><u>You lose.</u></b> <br>Computer: " + compPlay + "<br>Player: "  + userPlay;
             resultsArr.push(result);
             lose++;
             document.getElementById("result").innerHTML = resultsArr;
-            document.getElementById("lose").innerHTML = lose;
+            document.getElementById("lose").innerText = lose;
             console.log(result);
             win !== 0 ? percent = Math.round((win / rounds) * 100) : "";
-            document.getElementById("percent").innerHTML = percent;
+            document.getElementById("percent").innerText = percent;
             return;
         } else {
             var result = "<b><u>Player wins!</u></b> <br>Computer: " + compPlay + "<br>Player: " + userPlay; 
             resultsArr.push(result);
             win++;
             document.getElementById("result").innerHTML = resultsArr;
-            document.getElementById("win").innerHTML = win;
+            document.getElementById("win").innerText = win;
             console.log(result);
             win !== 0 ? percent = Math.round((win / rounds) * 100) : "";
-            document.getElementById("percent").innerHTML = percent;
+            document.getElementById("percent").innerText = percent;
             return;
             
         }
