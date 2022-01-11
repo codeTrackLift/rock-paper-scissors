@@ -27,7 +27,7 @@ function game() {
     }
 }
 
-// new button play 
+// button play 
 const buttonRock = document.getElementById('btn1');
 btn1.addEventListener('click', playRock);
 function playRock() {
