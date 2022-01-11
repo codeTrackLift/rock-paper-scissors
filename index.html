@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <script src="./index.js"></script>
+    <script src="./index.js" defer></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -15,19 +15,22 @@
         <p>Thanks for checking out my project!!</p>
     </div>
 
-    <div id="textPlay">
+    <div id="textSection">
         <h3>Text Prompt Option</h3>
-        <p>Click the button below to play 3 consecutive rounds using text prompts with entry validation.</p>
-        <button onclick="game();">Play 3 Rounds</button>
+        <p>Click the button below to play using text prompts with entry validation.</p>
+        <form id="textPlay" autocomplete="off">
+            <input type="text" name="textPlay" placeholder="rock, paper, or scissors..." required/>
+            <input id="submitBtn" type="submit" value="Submit" onclick="game()"/>
+        </form>
     </div>
 
     <div id="buttonPlay">
-        <h3>Icon Input Option</h3>
+        <h3>Button Input Option</h3>
         <p>Click any of the icons below to play...</p>
         <div>
-            <input class="button" type="image" src="./rock.png" value="Rock" onclick="buttonPlay('Rock')" alt="Rock image">
-            <input class="button" type="image" src="./paper.png" value="Paper" onclick="buttonPlay('Paper')" alt="Paper image">
-            <input class="button" type="image" src="./scissors.png" value="Scissors" onclick="buttonPlay('Scissors')" alt="Scissors image">
+            <input type="image" class="button" src="./rock.png" id="btn1"></input>
+            <input type="image" class="button" src="./paper.png" id="btn2"></input>
+            <input type="image" class="button" src="./scissors.png" id="btn3"></input>
         </div>
     </div>
 
