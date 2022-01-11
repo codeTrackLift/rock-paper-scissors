@@ -95,10 +95,10 @@ function printResults() {
     document.getElementById("percent").innerText = percent;
     document.getElementById("result").innerHTML = resultsArr;
     if(lose === 5 && win < 5 && wonFive === false) {
-        alert("Computer won 5 games. :-(");
+        alert("Computer won 5 games first.\n:-(");
         wonFive = true;
     } else if(win === 5 && lose < 5 && wonFive === false) {
-        alert("Player won 5 games! :-)");
+        alert("Player won 5 games first!\n:-)");
         wonFive = true;
     }
 }
