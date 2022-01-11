@@ -10,6 +10,7 @@ let userPlay = "";
 let compPlay = "";
 let result = "";
 let resultsArr = [];
+let wonFive = false;
 
 // text input 
 function game() {
@@ -93,10 +94,12 @@ function printResults() {
     document.getElementById("win").innerText = win;
     document.getElementById("percent").innerText = percent;
     document.getElementById("result").innerHTML = resultsArr;
-    if(lose === 5 && win < 5) {
+    if(lose === 5 && win < 5 && wonFive === false) {
         alert("Computer won 5 games. :-(");
-    } else if(win === 5 && lose < 5) {
+        wonFive = true;
+    } else if(win === 5 && lose < 5 && wonFive === false) {
         alert("Player won 5 games! :-)");
+        wonFive = true;
     }
 }
 
