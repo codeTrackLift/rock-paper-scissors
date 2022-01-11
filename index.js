@@ -93,6 +93,11 @@ function printResults() {
     document.getElementById("win").innerText = win;
     document.getElementById("percent").innerText = percent;
     document.getElementById("result").innerHTML = resultsArr;
+    if(lose === 5 && win < 5) {
+        alert("Computer won 5 games. :-(");
+    } else if(win === 5 && lose < 5) {
+        alert("Player won 5 games! :-)");
+    }
 }
 
 function resetStats() {
